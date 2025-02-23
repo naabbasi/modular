@@ -1,0 +1,17 @@
+[project]
+authors = ["Noman Ali <noman.ali.abbasy@gmail.com>"]
+channels = ["https://conda.modular.com/max-nightly", "https://conda.modular.com/max", "https://repo.prefix.dev/modular-community", "conda-forge"]
+name = "hello-magic"
+platforms = ["linux-64"]
+version = "0.1.0"
+
+[tasks]
+hello = "mojo hello.mojo"
+hello-build = "mojo build hello.mojo"
+dev-server = "fastapi dev main.py"
+
+[dependencies]
+max = ">=25.2.0.dev2025022305,<26"
+
+[pypi-dependencies]
+fastapi = { version = ">=0.115.8, <0.116", extras = ["standard"] }
